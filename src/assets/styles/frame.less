@@ -1,0 +1,187 @@
+#app, .el-container{
+  // min-height: 101%;
+  height: 100vh;
+}
+.new-msg-shake{
+  animation: shake 1.5s infinite;
+}
+@keyframes shake {
+  0%,4%,8%,12%,16%,20%,24%,28%,32%,36%,40%{
+    transform: translateX(-2px);
+  }
+  1%,5%,9%,13%,17%,21%,25%,29%,33%,37%,41%{
+    transform: translateX(2px);
+  }
+  2%,6%,10%,14%,18%,22%,26%,30%,34%,38%,43%{
+    transform: translateX(-2px);
+  }
+  3%,7%,11%,15%,19%,23%,27%,31%,35%,39%,44%{
+    transform: translateX(2px);
+  }
+}
+.clearfix {
+  &:after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+.el-container{
+  z-index: 0;
+  .el-header{
+    color: #fff;
+    padding: 0;
+    width: 100%;
+    z-index: 1;
+    .header{
+      height: 60px;
+      line-height: 60px;
+      .badge{
+        display: inline-block;
+        vertical-align: top;
+        sup{
+          top: 16px;
+        }
+      }
+    }
+  }
+  .el-aside{
+    transition: all .3s;
+    border-right: solid 1px #e6e6e6;
+    .el-menu{
+      border-right: none;
+    }
+  }
+  .el-main{
+    background-color: #f6f6f6;
+    .dashboard{
+      max-width: 1280px;
+      margin: 0 auto;
+      .dashboard-card{
+        margin: 25px 0;
+        .el-card__header{
+          padding: 15px 20px 10px;
+          .actions{
+            float: right;
+            button{
+              padding: 3px 0;
+            }
+            [class^="el-icon"]{
+              font-size: 19px;
+              display: inline-block;
+              margin-right: 10px;
+              color: #666;
+              &:last-child{
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    .page-content{
+      background-color: #f6f6f6;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      .button-field{
+        padding-bottom: 10px;
+        .icon {
+          float: right;
+          height: 100%;
+          line-height: 100%;
+          font-size: 16px;
+        }
+      }
+      .normal-form{
+        width: 600px;
+        padding-top: 20px;
+      }
+      .full-width-form{
+        width: 100%;
+        padding-top: 20px;
+        .el-col{
+          margin-right: 30px;
+        }
+      }
+    }
+    .search-card{
+      margin-bottom: 15px;
+      .el-card__header{
+        padding: 12px 20px;
+        border-bottom: none;
+        .icon{
+          float: right;
+          font-size: 18px;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+      .el-form-item{
+        margin-bottom: 12px;
+      }
+      .body{
+        padding: 0 20px 10px;
+      }
+      .search-button-container{
+        text-align: right;
+        margin: 0 20px 10px 0;
+      }
+    }
+  }
+}
+.checkbox-group-inner{
+  h2{
+    font-size: 14px;
+  }
+  .el-checkbox{
+    width: 126px;
+    margin-left: 10px;
+    .el-checkbox__input{
+      margin-top: -6px;
+    }
+    .el-checkbox__label{
+      display: inline-block;
+      width: 95px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+.p-bottom{
+  margin: 40px 0;
+}
+// avatar upload component
+.avatar-uploader .el-upload {
+  border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.avatar-uploader .el-upload:hover {
+  border-color: #409EFF;
+}
+.avatar-uploader-icon {
+  font-size: 28px;
+  color: #8c939d;
+  width: 150px;
+  height: 150px;
+  line-height: 150px !important;
+  text-align: center;
+}
+.avatar {
+  width: 150px;
+  height: 150px;
+  display: block;
+}
+.inline-form-item{
+  display: inline-block;
+}
+.inline-form-link{
+  display: inline-block;
+  margin: 0 20px;
+}
+.page {
+  padding-bottom: 100px;
+}

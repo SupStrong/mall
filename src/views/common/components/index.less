@@ -1,0 +1,147 @@
+
+.login-from {
+  width: 100%;
+  padding: 0 40px;
+
+  .el-form-item {
+    margin-bottom: 20px;
+
+    .el-input {
+      height: 40px;
+      font-size: 14px;
+      background-color: #F6F6F6;
+      border-radius: 4px;
+
+      /deep/ .el-input__inner {
+        height: 40px;
+        line-height: 50px;
+        padding: 0 10px;
+        &:focus {
+          border-color: #439361;
+        }
+      }
+
+      /deep/ .el-input__prefix {
+        top: 0;
+        left: 8px;
+      }
+
+      .form-icon {
+        font-size: 14px;
+        color: #dadada;
+
+        &.full {
+          color: #999;
+        }
+
+        &.focus {
+          color: #3e6bea;
+        }
+      }
+    }
+  }
+}
+
+.error-info {
+  width: 100%;
+  height: 44px;
+  padding: 0 40px;
+  margin-bottom: 14px;
+  margin-top: 20px;
+
+  &.ok {
+    margin: 0;
+  }
+
+  .box {
+    height: 100%;
+    font-size: 14px;
+    color: #F54848;
+    line-height: 16px;
+    border: 1px solid #EA3E4A;
+    border-radius: 4px;
+    background-color: #FFF2F2;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .icon {
+      width: 16px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.cell {
+  width: 100%;
+  padding: 0 40px;
+  display: flex;
+  .empty {
+    flex: 1;
+    visibility: hidden;
+  }
+}
+
+// 登录按钮
+.control {
+  width: 100%;
+  padding: 0 40px;
+
+  //margin-top: 45px;
+  .btn {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    background-color: #3c8550;
+    border-radius: 4px;
+    padding: 0;
+    cursor: pointer;
+    &:hover {
+      background-color: #439361;
+    }
+    &.is-disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  .others {
+    color: #3E6BEA;
+    line-height: 1.2;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    .el-dropdown {
+      cursor: pointer;
+      .dropdown {
+        color: #3E6BEA;
+      }
+    }
+
+    .empty {
+      flex: 1;
+    }
+
+    .box {
+      cursor: pointer;
+      @include center;
+
+      .icon {
+        font-size: 15px;
+        margin-right: 5px;
+      }
+
+      &:hover {
+        .text {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+}

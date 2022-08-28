@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name='description' content='熊洞智家是北京居然无忧科技有限公司旗下品牌，是以居然之家为依托，为居然之家卖场、品牌商、AI技术方案，整合居然之家相关资源，为消费者提供覆盖家居生活全场景、全生命周期的高品质、一站式服务平台，经销商提供家具建材、电器、智能家居产品安装、维修保养、售后服务，致力于成为国内中高端消费者健康美好生活的智能管家。并利用智能物联网、大数据及AI技术方案，为消费者提供日常保养、家政保洁、增值服务的高品质、一站式智能家居服务平台。致力于为用户提供家居生活全场景、全生命周期的高品质服务，成为国内中高端消费者健康美好生活的智能管家。'>
+    <meta name='keywords' content='熊洞智家，居然之家，丽屋帮手，无忧服务，居然无忧，智能管家，智能服务，居然社区，家电安装，家具安装，智能家居，家居保养，开荒保洁，家居大扫除，家电维修，厨房清洁，以旧换新，甲醛检测，甲醛治理，家政服务，净水器安装，智能门锁安装，到家服务，地板安装，建材安装'>
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>管理后台</title>
+    <script>
+      document.documentElement.style.fontSize = window.innerWidth / 75 + 'px';
+      window.onresize = function(e){
+        document.documentElement.style.fontSize = document.documentElement.offsetWidth / 75 + 'px';
+      }
+    </script>
+    <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <script type="text/javascript">
+      localStorage.setItem('ip', returnCitySN["cip"])
+      localStorage.setItem('area', returnCitySN["cname"])
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
