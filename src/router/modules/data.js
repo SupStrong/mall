@@ -8,7 +8,7 @@ export default [
     component: dataPage,
     meta: {
       auth: true,
-      title: '控制台',
+      title: '数据统计',
       icon: 'el-icon-share',
       notMenu: true,
       keepAlive: true,
@@ -204,6 +204,20 @@ export default [
         component: () => import('@/views/user/blogger'),
         meta: {
           title: '博主列表'
+        }
+      }, {
+        path: '/user/detail',
+        name: 'userDetail',
+        component: () => import('@/views/user/detail'),
+        meta: {
+          title: '测试的'
+        }
+      }, {
+        path: '/user/show',
+        name: 'userShow',
+        component: () => import('@/views/user/show'),
+        meta: {
+          title: '测试查看'
         }
       }
     ]

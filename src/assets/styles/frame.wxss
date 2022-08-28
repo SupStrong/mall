@@ -1,0 +1,222 @@
+#app,
+.el-container {
+  height: 100vh;
+}
+.new-msg-shake {
+  animation: shake 1.5s infinite;
+}
+@keyframes shake {
+  0%,
+  4%,
+  8%,
+  12%,
+  16%,
+  20%,
+  24%,
+  28%,
+  32%,
+  36%,
+  40% {
+    transform: translateX(-2px);
+  }
+  1%,
+  5%,
+  9%,
+  13%,
+  17%,
+  21%,
+  25%,
+  29%,
+  33%,
+  37%,
+  41% {
+    transform: translateX(2px);
+  }
+  2%,
+  6%,
+  10%,
+  14%,
+  18%,
+  22%,
+  26%,
+  30%,
+  34%,
+  38%,
+  43% {
+    transform: translateX(-2px);
+  }
+  3%,
+  7%,
+  11%,
+  15%,
+  19%,
+  23%,
+  27%,
+  31%,
+  35%,
+  39%,
+  44% {
+    transform: translateX(2px);
+  }
+}
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.el-container {
+  z-index: 0;
+}
+.el-container .el-header {
+  color: #fff;
+  padding: 0;
+  width: 100%;
+  z-index: 1;
+}
+.el-container .el-header .header {
+  height: 60px;
+  line-height: 60px;
+}
+.el-container .el-header .header .badge {
+  display: inline-block;
+  vertical-align: top;
+}
+.el-container .el-header .header .badge sup {
+  top: 16px;
+}
+.el-container .el-aside {
+  transition: all 0.3s;
+  border-right: solid 1px #e6e6e6;
+}
+.el-container .el-aside .el-menu {
+  border-right: none;
+}
+.el-container .el-main {
+  background-color: #f6f6f6;
+}
+.el-container .el-main .dashboard {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.el-container .el-main .dashboard .dashboard-card {
+  margin: 25px 0;
+}
+.el-container .el-main .dashboard .dashboard-card .el-card__header {
+  padding: 15px 20px 10px;
+}
+.el-container .el-main .dashboard .dashboard-card .el-card__header .actions {
+  float: right;
+}
+.el-container .el-main .dashboard .dashboard-card .el-card__header .actions button {
+  padding: 3px 0;
+}
+.el-container .el-main .dashboard .dashboard-card .el-card__header .actions [class^="el-icon"] {
+  font-size: 19px;
+  display: inline-block;
+  margin-right: 10px;
+  color: #666;
+}
+.el-container .el-main .dashboard .dashboard-card .el-card__header .actions [class^="el-icon"]:last-child {
+  margin-right: 0;
+}
+.el-container .el-main .page-content {
+  background-color: #f6f6f6;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+.el-container .el-main .page-content .button-field {
+  padding-bottom: 10px;
+}
+.el-container .el-main .page-content .button-field .icon {
+  float: right;
+  height: 100%;
+  line-height: 100%;
+  font-size: 16px;
+}
+.el-container .el-main .page-content .normal-form {
+  width: 600px;
+  padding-top: 20px;
+}
+.el-container .el-main .page-content .full-width-form {
+  width: 100%;
+  padding-top: 20px;
+}
+.el-container .el-main .page-content .full-width-form .el-col {
+  margin-right: 30px;
+}
+.el-container .el-main .search-card {
+  margin-bottom: 15px;
+}
+.el-container .el-main .search-card .el-card__header {
+  padding: 12px 20px;
+  border-bottom: none;
+}
+.el-container .el-main .search-card .el-card__header .icon {
+  float: right;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.el-container .el-main .search-card .el-form-item {
+  margin-bottom: 12px;
+}
+.el-container .el-main .search-card .body {
+  padding: 0 20px 10px;
+}
+.el-container .el-main .search-card .search-button-container {
+  text-align: right;
+  margin: 0 20px 10px 0;
+}
+.checkbox-group-inner h2 {
+  font-size: 14px;
+}
+.checkbox-group-inner .el-checkbox {
+  width: 126px;
+  margin-left: 10px;
+}
+.checkbox-group-inner .el-checkbox .el-checkbox__input {
+  margin-top: -6px;
+}
+.checkbox-group-inner .el-checkbox .el-checkbox__label {
+  display: inline-block;
+  width: 95px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.p-bottom {
+  margin: 40px 0;
+}
+.avatar-uploader .el-upload {
+  border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.avatar-uploader .el-upload:hover {
+  border-color: #409EFF;
+}
+.avatar-uploader-icon {
+  font-size: 28px;
+  color: #8c939d;
+  width: 150px;
+  height: 150px;
+  line-height: 150px !important;
+  text-align: center;
+}
+.avatar {
+  width: 150px;
+  height: 150px;
+  display: block;
+}
+.inline-form-item {
+  display: inline-block;
+}
+.inline-form-link {
+  display: inline-block;
+  margin: 0 20px;
+}
+.page {
+  padding-bottom: 100px;
+}
