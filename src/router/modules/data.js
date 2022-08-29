@@ -102,14 +102,14 @@ export default [
           title: '品牌列表'
         }
       }, {
-        path: '/goods/brandDetail/:id',
+        path: '/brand/brandDetail/:id',
         name: 'checkDetail',
         component: () => import('@/views/brand/brandDetail'),
         meta: {
           title: '品牌详情'
         }
       }, {
-        path: '/goods/brandCreate',
+        path: '/brand/brandCreate',
         name: 'checkDetail',
         component: () => import('@/views/brand/brandCreate'),
         meta: {
