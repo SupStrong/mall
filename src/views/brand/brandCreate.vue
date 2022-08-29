@@ -103,6 +103,30 @@
           </el-col>
         </el-row>
         <el-row>
+          <el-col :span="16">
+            <el-form-item label="商品数据:" required>
+              <el-table
+                :data="listData"
+                :header-cell-style="headerStyle"
+                border
+                style="width: 100%"
+              >
+                <el-table-column label="商品图" align="center">
+                  <template slot-scope="goodsScope">
+                    <img :src="goodsScope.row.image" style="width:80px" />
+                  </template>
+                </el-table-column>
+                <el-table-column prop="name" align="center" label="商品名称">
+                </el-table-column>
+                <el-table-column prop="price" align="center" label="商品单价">
+                </el-table-column>
+                <el-table-column prop="nums" align="center" label="商品数量">
+                </el-table-column>
+              </el-table>
+            </el-form-item>
+          </el-col>
+        </el-row>
+        <el-row>
           <el-col :span="8">
             <el-form-item label="创立时间:" required>
               <el-date-picker
@@ -138,6 +162,14 @@ export default {
   data() {
     return {
       form: {},
+      listData: [
+        {
+          image: 'https://juran-vue.oss-cn-beijing.aliyuncs.com/file/image/smartSpc/titleImage.png',
+          name: '测试商品',
+          price: '12',
+          nums: '1'
+        }
+      ]
     };
   },
   components: {
@@ -146,36 +178,37 @@ export default {
   },
   computed: {
     getId() {
-      let id = this.$route.query && this.$route.query.id
-      return id
+      let id = this.$route.query && this.$route.query.id;
+      return id;
     },
   },
   mounted() {
     if (this.getId) {
-      this.getDetail()
+      this.getDetail();
     }
   },
   methods: {
-    getDetail() {
-
+    getDetail() {},
+    headerStyle() {
+      return 'text-align: center; background-color: #F7F8FA; fontWeight: normal;';
     },
     submitForm() {
       try {
-        let data = null
+        let data = null;
         if (this.getId) {
           // data = (await cmsAdminApi.article.addArticle(this.form)).data
         } else {
-          this.form.id = this.getId
+          this.form.id = this.getId;
           // data = (await cmsAdminApi.article.updateArticle(this.form)).data
         }
         if (data.code === 200) {
-          this.$message.info('操作成功')
+          this.$message.info('操作成功');
           this.$router.push({
-            path: '/brand/brandList'
-          })
+            path: '/brand/brandList',
+          });
         }
       } catch (error) {
-        console.error(error)
+        console.error(error);
       }
     },
     clearForm() {
