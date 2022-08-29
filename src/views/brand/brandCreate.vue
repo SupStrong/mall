@@ -44,11 +44,10 @@
               <el-select
                 v-model="form.abc"
                 multiple
-                collapse-tags
                 placeholder="请选择"
               >
                 <el-option
-                  v-for="item in options"
+                  v-for="item in listTag"
                   :key="item.value"
                   :label="item.label"
                   :value="item.value"
@@ -168,6 +167,15 @@ export default {
           name: '测试商品',
           price: '12',
           nums: '1'
+        }
+      ],
+      listTag: [
+        {
+          value: '1',
+          label: '品牌一'
+        }, {
+          value: '2',
+          label: '幽默二'
         }
       ]
     };
