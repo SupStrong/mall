@@ -144,9 +144,39 @@ export default {
     infoField,
     testCity,
   },
+  computed: {
+    getId() {
+      let id = this.$route.query && this.$route.query.id
+      return id
+    },
+  },
+  mounted() {
+    if (this.getId) {
+      this.getDetail()
+    }
+  },
   methods: {
+    getDetail() {
+
+    },
     submitForm() {
-      alert('提交');
+      try {
+        let data = null
+        if (this.getId) {
+          // data = (await cmsAdminApi.article.addArticle(this.form)).data
+        } else {
+          this.form.id = this.getId
+          // data = (await cmsAdminApi.article.updateArticle(this.form)).data
+        }
+        if (data.code === 200) {
+          this.$message.info('操作成功')
+          this.$router.push({
+            path: '/brand/brandList'
+          })
+        }
+      } catch (error) {
+        console.error(error)
+      }
     },
     clearForm() {
       alert('清空');

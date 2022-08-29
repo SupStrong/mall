@@ -18,22 +18,8 @@
             </el-form-item>
           </el-col>
           <el-col :span="6">
-            <el-form-item label="联系人：">
+            <el-form-item label="品牌名：">
               <el-input v-model="search.title"></el-input>
-            </el-form-item>
-          </el-col>
-          <el-col :span="8">
-            <el-form-item label="接收时间：">
-              <el-date-picker
-                v-model="search.receivingTime"
-                type="daterange"
-                :default-time="['00:00:00','23:59:59']"
-                format="yyyy-MM-dd"
-                value-format="yyyy-MM-dd HH:mm:ss"
-                range-separator="至"
-                start-placeholder="开始日期"
-                end-placeholder="结束日期"
-              ></el-date-picker>
             </el-form-item>
           </el-col>
         </el-row>
@@ -97,6 +83,7 @@ export default {
       list: {
         data: [
           {
+            id: 1,
             orderCode: '1',
             nickName: '知秋',
             mobile: '17338132745',
@@ -179,9 +166,13 @@ export default {
   },
   methods: {
     handleButtonClick(data) {
-      console.log(data, 'Dsds')
-      if (data.button === 'check') {
-        alert('查看')
+      if (data.button === 'edit') {
+        this.$router.push({
+          path: '/brand/brandCreate',
+          query: {
+            id: data.data.id
+          }
+        });
       } else if (data.button === 'delete') {
         this.$confirm('此操作将删除《' + data.data.nickName + '》品牌删除?', '提示', {
           confirmButtonText: '确定',
