@@ -15,6 +15,7 @@ import '@/assets/styles/reset.css'
 import '@/assets/styles/frame.less'
 import '@/assets/styles/detail.less'
 import '@/assets/styles/color.styl'
+// import wangeditor from './assets/js/_wangeditor/release/wangEditor'
 // import '../theme/index.css'
 import 'element-ui/lib/theme-chalk/index.css' // 默认主题
 import {
@@ -35,6 +36,7 @@ Object.keys(filters).forEach((item) => {
   Vue.filter(item, filters[item])
 })
 
+// Vue.prototype.Wangeditor = wangeditor
 Vue.prototype.axios = axios
 Vue.prototype.$qs = qs
 Vue.prototype.defaultImage = defaultImage

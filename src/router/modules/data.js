@@ -66,14 +66,14 @@ export default [
         }
       }, {
         path: '/goods/goodDetail/:id',
-        name: 'checkDetail',
+        name: 'goodDetail',
         component: () => import('@/views/goods/goodDetail'),
         meta: {
           title: '商品详情'
         }
       }, {
         path: '/goods/goodCreate',
-        name: 'checkDetail',
+        name: 'goodCreate',
         component: () => import('@/views/goods/goodCreate'),
         meta: {
           title: '创建订单'
@@ -282,4 +282,120 @@ export default [
       }
     ]
   },
+  {
+    path: '/dimension/list',
+    name: 'dimensionList',
+    component: Layout,
+    redirect: '/dimension/list',
+    meta: {
+      auth: true,
+      title: '方案维度',
+      icon: 'el-icon-edit-outline',
+      notMenu: true,
+    },
+    children: [
+      {
+        path: '/dimension/list',
+        name: 'dimensionList',
+        component: () => import('@/views/dimension/list'),
+        meta: {
+          title: '方案维度'
+        }
+      }, {
+        path: '/dimension/detail',
+        name: 'dimensionDetail',
+        component: () => import('@/views/dimension/detail'),
+        meta: {
+          title: '方案维度详情'
+        }
+      }
+    ]
+  },
+  {
+    path: '/programme/list',
+    name: 'programmeList',
+    component: Layout,
+    redirect: '/programme/list',
+    meta: {
+      auth: true,
+      title: '美妆方案管理',
+      icon: 'el-icon-edit-outline',
+      notMenu: true,
+    },
+    children: [
+      {
+        path: '/programme/list',
+        name: 'programmeList',
+        component: () => import('@/views/programme/list'),
+        meta: {
+          title: '方案列表'
+        }
+      }, {
+        path: '/programme/detail',
+        name: 'programmeDetail',
+        component: () => import('@/views/programme/detail'),
+        meta: {
+          title: '方案详情'
+        }
+      }
+    ]
+  },
+  {
+    path: '/marketing/list',
+    name: 'marketingList',
+    component: Layout,
+    redirect: '/marketing/list',
+    meta: {
+      auth: true,
+      title: '营销活动',
+      icon: 'el-icon-edit-outline',
+      notMenu: true,
+    },
+    children: [
+      {
+        path: '/marketing/list',
+        name: 'marketingList',
+        component: () => import('@/views/marketing/list'),
+        meta: {
+          title: '活动列表'
+        }
+      }, {
+        path: '/marketing/detail',
+        name: 'marketingDetail',
+        component: () => import('@/views/marketing/detail'),
+        meta: {
+          title: '活动详情'
+        }
+      }
+    ]
+  },
+  {
+    path: '/tag/list',
+    name: 'tagList',
+    component: Layout,
+    redirect: '/tag/list',
+    meta: {
+      auth: true,
+      title: '标签',
+      icon: 'el-icon-edit-outline',
+      notMenu: true,
+    },
+    children: [
+      {
+        path: '/tag/list',
+        name: 'tagList',
+        component: () => import('@/views/tag/list'),
+        meta: {
+          title: '标签列表'
+        }
+      }, {
+        path: '/tag/detail',
+        name: 'tagDetail',
+        component: () => import('@/views/tag/detail'),
+        meta: {
+          title: '标签'
+        }
+      }
+    ]
+  }
 ]

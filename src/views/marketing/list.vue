@@ -4,37 +4,35 @@
       <searchField>
         <el-row>
           <el-col :span="6">
-            <el-form-item label="商品ID：">
-              <el-select v-model="search.billObject" clearable>
-                <el-option
-                  v-for="(item, index) in $store.state.Config.config[
-                    'tradeEvidence'
-                  ]"
-                  :value="item.dictCode"
-                  :label="item.dictName"
-                  :key="index"
-                ></el-option>
-              </el-select>
-            </el-form-item>
-          </el-col>
-          <el-col :span="6">
-            <el-form-item label="商品名：">
+            <el-form-item label="活动创建人：">
               <el-input v-model="search.title"></el-input>
             </el-form-item>
           </el-col>
           <el-col :span="6">
-            <el-form-item label="品牌：">
-              <el-select>
-                <el-option>123</el-option>
-              </el-select>
+            <el-form-item label="创建人手机号：">
+              <el-input v-model="search.title"></el-input>
             </el-form-item>
           </el-col>
           <el-col :span="6">
-              <el-form-item label="品牌：">
-                <el-select>
-                  <el-option>123</el-option>
-                </el-select>
-              </el-form-item>
+            <el-form-item label="活动状态：">
+              <el-input v-model="search.title"></el-input>
+            </el-form-item>
+          </el-col>
+        </el-row>
+        <el-row>
+          <el-col :span="8">
+            <el-form-item label="创建时间：">
+              <el-date-picker
+                v-model="search.receivingTime"
+                type="daterange"
+                :default-time="['00:00:00', '23:59:59']"
+                format="yyyy-MM-dd"
+                value-format="yyyy-MM-dd HH:mm:ss"
+                range-separator="至"
+                start-placeholder="开始日期"
+                end-placeholder="结束日期"
+              ></el-date-picker>
+            </el-form-item>
           </el-col>
         </el-row>
         <div class="search-button-container">
@@ -46,11 +44,11 @@
       </searchField>
     </el-form>
     <div class="page-content">
-      <div class="button-box">
+      <!-- <div class="button-box">
         <div class="button-field">
           <el-button type="primary" @click="handleClick(item)">创建</el-button>
         </div>
-      </div>
+      </div> -->
       <el-card>
         <v-table
           ref="table"
@@ -94,39 +92,40 @@ export default {
         ],
         columns: [
           {
-            label: '品牌名',
+            label: '创建人',
+            key: 'orderCode',
+            width: '180px',
+          },
+          {
+            label: '联系方式',
             key: 'nickName',
           },
           {
-            label: '分类',
+            label: '活动创建时间',
             key: 'mobile',
           },
           {
-            label: '商品名称',
+            label: '活动类型',
             key: 'mobile',
           },
           {
-            label: '销售价',
+            label: '活动状态',
             key: 'mobile',
           },
           {
-            label: '销量',
-            key: 'mobile',
-          }, {
-            label: '关联活动数',
+            label: '关联商品个数',
             key: 'mobile',
           },
           {
-            label: '关联博主数',
+            label: '活动（开始时间-结束时间）',
             key: 'mobile',
-          }, {
-            label: '商品规格',
+          },
+          {
+            label: '邀请人数',
             key: 'mobile',
-          }, {
-            label: '标签',
-            key: 'mobile',
-          }, {
-            label: '状态',
+          },
+          {
+            label: '带货单数',
             key: 'mobile',
           },
           {
@@ -136,18 +135,13 @@ export default {
             selectButton: true,
             buttonInfos: [
               {
-                name: 'delete',
-                label: '删除',
-                type: 'text',
-              }, {
-                name: 'edit',
-                label: '编辑',
+                name: 'show',
+                label: '查看',
                 type: 'text',
               },
             ],
           },
         ],
-        // loading: false,
         total: 12,
       },
     };
@@ -157,25 +151,13 @@ export default {
   },
   methods: {
     handleButtonClick(data) {
-      if (data.button === 'edit') {
+      if (data.button === 'show') {
         this.$router.push({
-          path: '/goods/goodDetail',
+          path: '/marketing/detail',
           query: {
             id: data.data.id,
           },
         });
-      } else if (data.button === 'delete') {
-        this.$confirm(
-          '此操作将删除《' + data.data.nickName + '》品牌删除?',
-          '提示',
-          {
-            confirmButtonText: '确定',
-            cancelButtonText: '取消',
-            type: 'warning',
-          }
-        )
-          .then(() => {})
-          .catch(() => {});
       }
     },
     clearSearch() {
@@ -186,7 +168,7 @@ export default {
     },
     handleClick() {
       this.$router.push({
-        path: '/goods/goodDetail',
+        path: '/marketing/detail',
         query: {},
       });
     },
