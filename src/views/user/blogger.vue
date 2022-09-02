@@ -27,7 +27,7 @@
               <el-date-picker
                 v-model="search.receivingTime"
                 type="daterange"
-                :default-time="['00:00:00','23:59:59']"
+                :default-time="['00:00:00', '23:59:59']"
                 format="yyyy-MM-dd"
                 value-format="yyyy-MM-dd HH:mm:ss"
                 range-separator="至"
@@ -48,10 +48,9 @@
     <div class="page-content">
       <div class="button-box">
         <div class="button-field">
-          <el-button
-          type="primary"
-            @click="handleClick(item)"
-          >创建测试</el-button>
+          <el-button type="primary" @click="handleClick(item)"
+            >创建测试</el-button
+          >
         </div>
       </div>
       <el-card>
@@ -66,20 +65,10 @@
           :defaultcurrentPage="1"
           v-on:buttonClick="handleButtonClick"
           @handleCurrentChange="
-            handleCurrentChange(
-              $event,
-              getTransaction,
-              search,
-              'pageNo'
-            )
+            handleCurrentChange($event, getTransaction, search, 'pageNo')
           "
           @handleSizeChange="
-            handleSizeChange(
-              $event,
-              getTransaction,
-              search,
-              'pageSize'
-            )
+            handleSizeChange($event, getTransaction, search, 'pageSize')
           "
         ></v-table>
       </el-card>
@@ -101,36 +90,59 @@ export default {
             nickName: '知秋',
             mobile: '17338132745',
             type: true,
-            del: 0
-          }
+            del: 0,
+          },
         ],
         columns: [
           {
             label: 'ID',
             key: 'orderCode',
-            width: '180px'
+            width: '180px',
           },
           {
             label: '用户昵称',
-            key: 'nickName'
+            key: 'nickName',
           },
           {
             label: '联系方式',
-            key: 'mobile'
-          }, {
+            key: 'mobile',
+          },
+          {
+            label: '活动数',
+            key: 'orderCode',
+          },
+          {
+            label: '带单数',
+            key: 'orderCode',
+          },
+          {
+            label: '邀新数',
+            key: 'orderCode',
+          },
+          {
+            label: '关联品牌',
+            key: 'orderCode',
+          },
+          {
+            label: '关联商品',
+            key: 'orderCode',
+          },
+          {
             label: '状态',
             key: 'status',
             type: 'render',
             render: (h, params) => {
-              let type = params.row.type
-              return (<div>
-                <el-switch
-                  value="type"
-                  active-color="#13ce66"
-                  inactive-color="#ff4949">
-                </el-switch>
-              </div>)
-            }
+              let type = params.row.type;
+              return (
+                <div>
+                  <el-switch
+                    value="type"
+                    active-color="#13ce66"
+                    inactive-color="#ff4949"
+                  ></el-switch>
+                </div>
+              );
+            },
           },
           {
             label: '操作',
@@ -141,57 +153,56 @@ export default {
               {
                 name: 'check',
                 label: '查看',
-                type: 'text'
+                type: 'text',
               },
               {
                 name: 'edit',
                 label: '编辑',
-                type: 'text'
+                type: 'text',
               },
               {
                 name: 'delete',
                 label: '删除',
                 type: 'text',
-                isShow (row) {
-                  return row.del !== 0
-                }
-              }
-            ]
-          }
+                isShow(row) {
+                  return row.del !== 0;
+                },
+              },
+            ],
+          },
         ],
         // loading: false,
-        total: 12
-      }
-    }
+        total: 12,
+      },
+    };
   },
   components: {
-    vTable
+    vTable,
   },
   methods: {
     handleButtonClick(data) {
       if (data.button === 'check') {
-        alert('查看')
+        alert('查看');
       } else if (data.button === 'edit') {
-        alert('编辑')
+        alert('编辑');
       }
     },
     clearSearch() {
-      alert('清空')
+      alert('清空');
     },
     getTransaction() {
-      alert('查询')
+      alert('查询');
     },
     handleClick() {
       this.$router.push({
         path: '/user/detail',
-        query: {
-        }
+        query: {},
       });
-    }
-  }
-}
+    },
+  },
+};
 </script>
-<style lang='stylus' scoped>
+<style lang="stylus" scoped>
 .el-input{
   width 220px
 }

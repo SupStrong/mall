@@ -94,15 +94,15 @@ export default {
         ],
         columns: [
           {
+            label: '商品名称',
+            key: 'mobile',
+          },
+          {
             label: '品牌名',
             key: 'nickName',
           },
           {
             label: '分类',
-            key: 'mobile',
-          },
-          {
-            label: '商品名称',
             key: 'mobile',
           },
           {
@@ -127,7 +127,20 @@ export default {
             key: 'mobile',
           }, {
             label: '状态',
-            key: 'mobile',
+            key: 'status',
+            type: 'render',
+            render: (h, params) => {
+              let type = params.row.type;
+              return (
+                <div>
+                  <el-switch
+                    value="type"
+                    active-color="#13ce66"
+                    inactive-color="#ff4949"
+                  ></el-switch>
+                </div>
+              );
+            },
           },
           {
             label: '操作',

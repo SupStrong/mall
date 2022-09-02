@@ -57,3 +57,60 @@ const orderType = [{
   id: '6',
   name: '已退款'
 }]
+// 博主来源
+let sourceType = [
+  {
+    id: '1',
+    name: '邀请入驻'
+  }, {
+    id: '2',
+    name: '员工端'
+  }, {
+    id: '2',
+    name: '企业员工'
+  }
+]
+// 海报类型
+let posterType = [
+  {
+    id: '1',
+    name: '全局海报'
+  }, {
+    id: '2',
+    name: '方案海报'
+  }, {
+    id: '3',
+    name: '文章海报'
+  }, {
+    id: '4',
+    name: '单品海报'
+  }, {
+    id: '5',
+    name: '活动海报'
+  }, {
+    id: '6',
+    name: '入驻海报'
+  }
+]
+// 标签类型
+let tagType = [
+  {
+    id: '1',
+    name: '文章标签'
+  }, {
+    id: '2',
+    name: '方案维度标签'
+  }, {
+    id: '3',
+    name: '商品标签'
+  }, {
+    id: '4',
+    name: '活动标签'
+  }, {
+    id: '5',
+    name: '海报标签'
+  }, {
+    id: '6',
+    name: '分类标签'
+  }
+]

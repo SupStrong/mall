@@ -118,43 +118,6 @@ export default [
       }
     ]
   },
-  // 分类
-  {
-    path: '/category',
-    name: 'category',
-    component: Layout,
-    redirect: '/category/categoryList',
-    meta: {
-      auth: true,
-      title: '分类管理',
-      icon: 'el-icon-edit-outline',
-      notMenu: true,
-    },
-    children: [
-      {
-        path: '/category/categoryList',
-        name: 'categoryList',
-        component: () => import('@/views/category/categoryList'),
-        meta: {
-          title: '分类列表'
-        }
-      }, {
-        path: '/category/categoryDetail/:id',
-        name: 'checkDetail',
-        component: () => import('@/views/category/categoryDetail'),
-        meta: {
-          title: '分类详情'
-        }
-      }, {
-        path: '/category/categoryCreate',
-        name: 'checkDetail',
-        component: () => import('@/views/category/categoryCreate'),
-        meta: {
-          title: '创建分类'
-        }
-      }
-    ]
-  },
   // 订单
   {
     path: '/order',
@@ -289,7 +252,7 @@ export default [
     redirect: '/dimension/list',
     meta: {
       auth: true,
-      title: '方案维度',
+      title: '方案维度/标签',
       icon: 'el-icon-edit-outline',
       notMenu: true,
     },
@@ -307,35 +270,6 @@ export default [
         component: () => import('@/views/dimension/detail'),
         meta: {
           title: '方案维度详情'
-        }
-      }
-    ]
-  },
-  {
-    path: '/programme/list',
-    name: 'programmeList',
-    component: Layout,
-    redirect: '/programme/list',
-    meta: {
-      auth: true,
-      title: '美妆方案管理',
-      icon: 'el-icon-edit-outline',
-      notMenu: true,
-    },
-    children: [
-      {
-        path: '/programme/list',
-        name: 'programmeList',
-        component: () => import('@/views/programme/list'),
-        meta: {
-          title: '方案列表'
-        }
-      }, {
-        path: '/programme/detail',
-        name: 'programmeDetail',
-        component: () => import('@/views/programme/detail'),
-        meta: {
-          title: '方案详情'
         }
       }
     ]

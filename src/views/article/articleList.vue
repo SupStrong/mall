@@ -109,6 +109,9 @@ export default {
             label: '文章类型',
             key: 'mobile'
           }, {
+            label: '创建时间',
+            key: 'mobile'
+          }, {
             label: '发布状态',
             key: 'status',
             type: 'render',

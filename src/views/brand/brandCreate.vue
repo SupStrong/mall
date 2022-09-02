@@ -16,25 +16,23 @@
         </el-row>
         <el-row>
           <el-col :span="8">
-            <el-form-item label="品牌Logo:" required>
-              <el-upload
-                class="avatar-uploader"
-                action="/api/file/upload"
-                :show-file-list="false"
-                :on-success="
-                  (res, file, filelist) => {
-                    return handleAvatarSuccess(
-                      res,
-                      file,
-                      filelist,
-                      'certificateImg'
-                    );
-                  }
-                "
-              >
-                <img v-if="form.a" src="" class="avatar" />
-                <i v-else class="el-icon-plus avatar-uploader-icon"></i>
-              </el-upload>
+            <el-form-item label="别称:" required>
+              <el-input
+                v-model="form.receiverName"
+                placeholder="别称"
+                v-validate="'required'"
+              ></el-input>
+            </el-form-item>
+          </el-col>
+        </el-row>
+        <el-row>
+          <el-col :span="8">
+            <el-form-item label="英文名:" required>
+              <el-input
+                v-model="form.receiverName"
+                placeholder="英文名"
+                v-validate="'required'"
+              ></el-input>
             </el-form-item>
           </el-col>
         </el-row>
@@ -54,28 +52,6 @@
                 >
                 </el-option>
               </el-select>
-            </el-form-item>
-          </el-col>
-        </el-row>
-        <el-row>
-          <el-col :span="8">
-            <el-form-item label="别称:" required>
-              <el-input
-                v-model="form.receiverName"
-                placeholder="别称"
-                v-validate="'required'"
-              ></el-input>
-            </el-form-item>
-          </el-col>
-        </el-row>
-        <el-row>
-          <el-col :span="8">
-            <el-form-item label="英文名:" required>
-              <el-input
-                v-model="form.receiverName"
-                placeholder="英文名"
-                v-validate="'required'"
-              ></el-input>
             </el-form-item>
           </el-col>
         </el-row>
@@ -102,30 +78,6 @@
           </el-col>
         </el-row>
         <el-row>
-          <el-col :span="16">
-            <el-form-item label="商品数据:" required>
-              <el-table
-                :data="listData"
-                :header-cell-style="headerStyle"
-                border
-                style="width: 100%"
-              >
-                <el-table-column label="商品图" align="center">
-                  <template slot-scope="goodsScope">
-                    <img :src="goodsScope.row.image" style="width:80px" />
-                  </template>
-                </el-table-column>
-                <el-table-column prop="name" align="center" label="商品名称">
-                </el-table-column>
-                <el-table-column prop="price" align="center" label="商品单价">
-                </el-table-column>
-                <el-table-column prop="nums" align="center" label="商品数量">
-                </el-table-column>
-              </el-table>
-            </el-form-item>
-          </el-col>
-        </el-row>
-        <el-row>
           <el-col :span="8">
             <el-form-item label="创立时间:" required>
               <el-date-picker
@@ -134,6 +86,54 @@
                 placeholder="选择品牌创立时间"
               >
               </el-date-picker>
+            </el-form-item>
+          </el-col>
+        </el-row>
+        <el-row>
+          <el-col :span="8">
+            <el-form-item label="品牌Logo:" required>
+              <el-upload
+                class="avatar-uploader"
+                action="/api/file/upload"
+                :show-file-list="false"
+                :on-success="
+                  (res, file, filelist) => {
+                    return handleAvatarSuccess(
+                      res,
+                      file,
+                      filelist,
+                      'certificateImg'
+                    );
+                  }
+                "
+              >
+                <img v-if="form.a" src="" class="avatar" />
+                <i v-else class="el-icon-plus avatar-uploader-icon"></i>
+              </el-upload>
+            </el-form-item>
+          </el-col>
+        </el-row>
+        <el-row>
+          <el-col :span="8">
+            <el-form-item label="品牌视频:" required>
+              <el-upload
+                class="avatar-uploader"
+                action="/api/file/upload"
+                :show-file-list="false"
+                :on-success="
+                  (res, file, filelist) => {
+                    return handleAvatarSuccess(
+                      res,
+                      file,
+                      filelist,
+                      'certificateImg'
+                    );
+                  }
+                "
+              >
+                <img v-if="form.a" src="" class="avatar" />
+                <i v-else class="el-icon-plus avatar-uploader-icon"></i>
+              </el-upload>
             </el-form-item>
           </el-col>
         </el-row>
