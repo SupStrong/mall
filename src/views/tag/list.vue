@@ -24,7 +24,9 @@
           </el-col>
           <el-col :span="6">
             <el-form-item label="标签类型：">
-              <el-input v-model="search.title"></el-input>
+              <el-select>
+                <el-option>123</el-option>
+              </el-select>
             </el-form-item>
           </el-col>
         </el-row>

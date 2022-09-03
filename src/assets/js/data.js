@@ -143,6 +143,13 @@ let articleUserList = [
     name: '分类标签'
   }
 ]
+// 方案维度类型
+let dimensionList = [
+  {
+    id: '1',
+    name: '10-20岁'
+  }
+]
 // 活动名称
 let marketingTitleList = [
   {
