@@ -133,11 +133,6 @@ export default {
             selectButton: true,
             buttonInfos: [
               {
-                name: 'check',
-                label: '查看',
-                type: 'text'
-              },
-              {
                 name: 'edit',
                 label: '编辑',
                 type: 'text'
@@ -145,10 +140,7 @@ export default {
               {
                 name: 'delete',
                 label: '删除',
-                type: 'text',
-                isShow (row) {
-                  return row.del !== 0
-                }
+                type: 'text'
               }
             ]
           }
@@ -163,10 +155,22 @@ export default {
   },
   methods: {
     handleButtonClick(data) {
-      if (data.button === 'check') {
-        alert('查看')
-      } else if (data.button === 'edit') {
-        alert('编辑')
+      if (data.button === 'edit') {
+        this.$router.push({
+          path: '/article/articleCreate',
+          query: {
+            id: 1
+          }
+        });
+      } else if (data.button == 'delete') {
+        this.$confirm('此操作将删除《' + data.data.nickName + '》品牌删除?', '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        })
+          .then(() => {
+          })
+          .catch(() => {});
       }
     },
     clearSearch() {

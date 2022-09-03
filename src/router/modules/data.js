@@ -246,35 +246,6 @@ export default [
     ]
   },
   {
-    path: '/dimension/list',
-    name: 'dimensionList',
-    component: Layout,
-    redirect: '/dimension/list',
-    meta: {
-      auth: true,
-      title: '方案维度/标签',
-      icon: 'el-icon-edit-outline',
-      notMenu: true,
-    },
-    children: [
-      {
-        path: '/dimension/list',
-        name: 'dimensionList',
-        component: () => import('@/views/dimension/list'),
-        meta: {
-          title: '方案维度'
-        }
-      }, {
-        path: '/dimension/detail',
-        name: 'dimensionDetail',
-        component: () => import('@/views/dimension/detail'),
-        meta: {
-          title: '方案维度详情'
-        }
-      }
-    ]
-  },
-  {
     path: '/marketing/list',
     name: 'marketingList',
     component: Layout,
