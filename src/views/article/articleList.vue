@@ -177,7 +177,7 @@ export default {
     },
     handleClick() {
       this.$router.push({
-        path: '/user/detail',
+        path: '/article/articleCreate',
         query: {
         }
       });

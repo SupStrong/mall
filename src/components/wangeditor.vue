@@ -5,12 +5,13 @@
   </div>
 </template>
 <script>
+import E from 'wangeditor';
 export default {
   data() {
     return {};
   },
   mounted() {
-    this.editor = new this.Wangeditor(
+    this.editor = new E(
       this.$refs.wangeditorMenu,
       this.$refs.wangeditor
     );

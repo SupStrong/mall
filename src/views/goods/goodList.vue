@@ -172,7 +172,7 @@ export default {
     handleButtonClick(data) {
       if (data.button === 'edit') {
         this.$router.push({
-          path: '/goods/goodDetail',
+          path: '/goods/goodCreate',
           query: {
             id: data.data.id,
           },
@@ -199,7 +199,7 @@ export default {
     },
     handleClick() {
       this.$router.push({
-        path: '/goods/goodDetail',
+        path: '/goods/goodCreate',
         query: {},
       });
     },

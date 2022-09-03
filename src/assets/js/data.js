@@ -43,16 +43,16 @@ const orderType = [{
   name: '待支付'
 }, {
   id: '2',
-  name: '已支付'
-}, {
-  id: '3',
   name: '待发货'
 }, {
-  id: '4',
+  id: '3',
   name: '已发货'
 }, {
-  id: '5',
+  id: '4',
   name: '已签收'
+}, {
+  id: '5',
+  name: '已完成'
 }, {
   id: '6',
   name: '已退款'
@@ -64,10 +64,13 @@ let sourceType = [
     name: '邀请入驻'
   }, {
     id: '2',
-    name: '员工端'
+    name: '博主端'
   }, {
-    id: '2',
+    id: '3',
     name: '企业员工'
+  }, {
+    id: '4',
+    name: 'C端升级'
   }
 ]
 // 海报类型
@@ -94,6 +97,29 @@ let posterType = [
 ]
 // 标签类型
 let tagType = [
+  {
+    id: '1',
+    name: '文章标签'
+  }, {
+    id: '2',
+    name: '方案维度标签'
+  }, {
+    id: '3',
+    name: '商品标签'
+  }, {
+    id: '4',
+    name: '活动标签'
+  }, {
+    id: '5',
+    name: '海报标签'
+  }, {
+    id: '6',
+    name: '分类标签'
+  }
+]
+
+// 标签类型
+let articleUserList = [
   {
     id: '1',
     name: '文章标签'
