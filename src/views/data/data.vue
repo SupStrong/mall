@@ -1,9 +1,63 @@
 <template>
   <div>
     <infoField
+      title="用户数据"
+      icon="el-icon-s-data"
+      style="margin-top: 15px"
+      noTime
+    >
+      <div>
+        <el-row>
+          <div class="data_box">
+            <div class="data_box_item">
+              <div class="data_box_icon">
+                <i class=""></i>
+              </div>
+              <div class="data_box_content">
+                <p class="data_box_title">
+                  入驻博主数
+                  <el-tooltip
+                    class="item"
+                    effect="dark"
+                    content="今天0点至更新时间下单数"
+                    placement="top"
+                  >
+                    <i class="el-icon-info"></i>
+                  </el-tooltip>
+                </p>
+                <p class="data_box_num">{{ dayreal.a }}</p>
+                <p class="data_box_numLast">昨天：{{ dayreal.b }}</p>
+              </div>
+            </div>
+            <div class="data_box_item">
+              <div class="data_box_icon">
+                <i class=""></i>
+              </div>
+              <div class="data_box_content">
+                <p class="data_box_title">
+                  总用户数
+                  <el-tooltip
+                    class="item"
+                    effect="dark"
+                    content="今天0点至更新时间完成数"
+                    placement="top"
+                  >
+                    <i class="el-icon-info"></i>
+                  </el-tooltip>
+                </p>
+                <p class="data_box_num">{{ dayreal.a }}</p>
+                <p class="data_box_numLast">昨天：{{ dayreal.b }}</p>
+              </div>
+            </div>
+          </div>
+        </el-row>
+      </div>
+    </infoField>
+    <infoField
       title="订单数据"
       icon="el-icon-s-data"
       noTime
+      style="margin-top: 15px"
     >
       <div>
         <el-row>
@@ -128,59 +182,6 @@
                     class="item"
                     effect="dark"
                     content="今天0点至更新时间注册数"
-                    placement="top"
-                  >
-                    <i class="el-icon-info"></i>
-                  </el-tooltip>
-                </p>
-                <p class="data_box_num">{{ dayreal.a }}</p>
-                <p class="data_box_numLast">昨天：{{ dayreal.b }}</p>
-              </div>
-            </div>
-          </div>
-        </el-row>
-      </div>
-    </infoField>
-    <infoField
-      title="用户数据"
-      icon="el-icon-s-data"
-      style="margin-top: 15px"
-      noTime
-    >
-      <div>
-        <el-row>
-          <div class="data_box">
-            <div class="data_box_item">
-              <div class="data_box_icon">
-                <i class=""></i>
-              </div>
-              <div class="data_box_content">
-                <p class="data_box_title">
-                  入驻博主数
-                  <el-tooltip
-                    class="item"
-                    effect="dark"
-                    content="今天0点至更新时间下单数"
-                    placement="top"
-                  >
-                    <i class="el-icon-info"></i>
-                  </el-tooltip>
-                </p>
-                <p class="data_box_num">{{ dayreal.a }}</p>
-                <p class="data_box_numLast">昨天：{{ dayreal.b }}</p>
-              </div>
-            </div>
-            <div class="data_box_item">
-              <div class="data_box_icon">
-                <i class=""></i>
-              </div>
-              <div class="data_box_content">
-                <p class="data_box_title">
-                  总用户数
-                  <el-tooltip
-                    class="item"
-                    effect="dark"
-                    content="今天0点至更新时间完成数"
                     placement="top"
                   >
                     <i class="el-icon-info"></i>

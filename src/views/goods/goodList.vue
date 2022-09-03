@@ -30,7 +30,7 @@
             </el-form-item>
           </el-col>
           <el-col :span="6">
-              <el-form-item label="品牌：">
+              <el-form-item label="分类：">
                 <el-select>
                   <el-option>123</el-option>
                 </el-select>

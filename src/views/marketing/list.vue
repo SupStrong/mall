@@ -14,6 +14,11 @@
             </el-form-item>
           </el-col>
           <el-col :span="6">
+            <el-form-item label="活动类型：">
+              <el-input v-model="search.title"></el-input>
+            </el-form-item>
+          </el-col>
+          <el-col :span="6">
             <el-form-item label="活动状态：">
               <el-input v-model="search.title"></el-input>
             </el-form-item>

@@ -143,3 +143,13 @@ let articleUserList = [
     name: '分类标签'
   }
 ]
+// 活动名称
+let marketingTitleList = [
+  {
+    id: '1',
+    name: '七月活动'
+  }, {
+    id: '2',
+    name: '八月活动'
+  }
+]
