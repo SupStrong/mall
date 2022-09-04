@@ -105,9 +105,24 @@ export default {
             label: '海报类型',
             key: 'mobile'
           },
+
           {
             label: '邀请人数',
             key: 'mobile'
+          }, {
+            label: '状态',
+            key: 'status',
+            type: 'render',
+            render: (h, params) => {
+              let type = params.row.type
+              return (<div>
+                <el-switch
+                  value="type"
+                  active-color="#13ce66"
+                  inactive-color="#ff4949">
+                </el-switch>
+              </div>)
+            }
           }, {
             label: '创建时间',
             key: 'mobile'
@@ -143,7 +158,7 @@ export default {
     handleButtonClick(data) {
       if (data.button === 'edit') {
         this.$router.push({
-          path: '/brand/brandCreate',
+          path: '/poster/detail',
           query: {
             id: data.data.id
           }
@@ -167,7 +182,7 @@ export default {
     },
     handleClick() {
       this.$router.push({
-        path: '/brand/brandCreate',
+        path: '/poster/detail',
         query: {
         }
       });

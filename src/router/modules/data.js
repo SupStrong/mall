@@ -133,14 +133,14 @@ export default [
     children: [
       {
         path: '/order/orderList',
-        name: 'categoryList',
+        name: 'orderList',
         component: () => import('@/views/order/orderList'),
         meta: {
           title: '订单列表'
         }
       }, {
         path: '/order/orderDetail/:id',
-        name: 'checkDetail',
+        name: 'orderDetail',
         component: () => import('@/views/order/orderDetail'),
         meta: {
           title: '订单详情'
@@ -167,20 +167,6 @@ export default [
         component: () => import('@/views/user/blogger'),
         meta: {
           title: '博主列表'
-        }
-      }, {
-        path: '/user/detail',
-        name: 'userDetail',
-        component: () => import('@/views/user/detail'),
-        meta: {
-          title: '测试的'
-        }
-      }, {
-        path: '/user/show',
-        name: 'userShow',
-        component: () => import('@/views/user/show'),
-        meta: {
-          title: '测试查看'
         }
       }
     ]
@@ -304,3 +290,4 @@ export default [
     ]
   }
 ]
+//

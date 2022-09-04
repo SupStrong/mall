@@ -88,6 +88,11 @@
               </el-upload>
             </el-form-item>
         </el-row>
+         <el-row>
+          <el-form-item label="上传视频:" required>
+              <el-input type="textarea" placeholder="格式[规格类型: 正常规格,是否为特殊用途化妆品: 是]"></el-input>
+            </el-form-item>
+        </el-row>
         <el-row>
             <el-col :span="24">
               <el-form>

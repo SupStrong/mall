@@ -124,6 +124,17 @@ export default {
             key: 'mobile',
           }, {
             label: '标签',
+            key: 'status',
+            width: '200',
+            type: 'render',
+            render: (h, params) => {
+              return (<div>
+                <el-button type="warning" size='mini'>少女风</el-button>
+                <el-button type="success" size='mini'>10~20岁</el-button>
+              </div>)
+            }
+          }, {
+            label: '标签',
             key: 'mobile',
           }, {
             label: '状态',

@@ -1,10 +1,10 @@
-// 推广形式
+// 推广活动类型
 const markType = [{
   id: '1',
   name: '文章'
 }, {
   id: '2',
-  name: '海报'
+  name: '单品海报'
 }, {
   id: '3',
   name: '方案'
@@ -14,6 +14,15 @@ const markType = [{
 }, {
   id: '5',
   name: '视频'
+}, {
+  id: '6',
+  name: '品牌'
+}, {
+  id: '7',
+  name: '分类'
+}, {
+  id: '8',
+  name: '成分'
 }]
 // 营销活动
 const promotionType = [{
@@ -64,13 +73,13 @@ let sourceType = [
     name: '邀请入驻'
   }, {
     id: '2',
-    name: '博主端'
+    name: '小红书博主'
   }, {
     id: '3',
     name: '企业员工'
   }, {
     id: '4',
-    name: 'C端升级'
+    name: 'C端用户升级'
   }
 ]
 // 海报类型
@@ -96,6 +105,15 @@ let posterType = [
   }, {
     id: '7',
     name: '方案维度海报'
+  }, {
+    id: '8',
+    name: '品牌海报'
+  }, {
+    id: '9',
+    name: '分类海报'
+  }, {
+    id: '10',
+    name: '成分海报'
   }
 ]
 // 标签类型
@@ -118,45 +136,14 @@ let tagType = [
   }, {
     id: '6',
     name: '分类标签'
-  }
-]
-
-// 标签类型
-let articleUserList = [
-  {
-    id: '1',
-    name: '文章标签'
   }, {
-    id: '2',
-    name: '方案维度标签'
+    id: '7',
+    name: '品牌标签'
   }, {
-    id: '3',
-    name: '商品标签'
+    id: '8',
+    name: '活动名称'
   }, {
-    id: '4',
-    name: '活动标签'
-  }, {
-    id: '5',
-    name: '海报标签'
-  }, {
-    id: '6',
-    name: '分类标签'
-  }
-]
-// 方案维度类型
-let dimensionList = [
-  {
-    id: '1',
-    name: '10-20岁'
-  }
-]
-// 活动名称
-let marketingTitleList = [
-  {
-    id: '1',
-    name: '七月活动'
-  }, {
-    id: '2',
-    name: '八月活动'
+    id: '9',
+    name: '成分名称'
   }
 ]

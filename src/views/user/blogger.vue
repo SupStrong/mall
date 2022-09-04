@@ -17,6 +17,14 @@
               </el-select>
             </el-form-item>
           </el-col>
+           <el-col :span="6">
+            <el-form-item label="审核状态：">
+              <el-select>
+                <el-option>已审核</el-option>
+                <el-option>未审核</el-option>
+              </el-select>
+            </el-form-item>
+          </el-col>
           <el-col :span="6">
             <el-form-item label="联系人：">
               <el-input v-model="search.title"></el-input>
@@ -46,13 +54,6 @@
       </searchField>
     </el-form>
     <div class="page-content">
-      <div class="button-box">
-        <div class="button-field">
-          <el-button type="primary" @click="handleClick(item)"
-            >创建测试</el-button
-          >
-        </div>
-      </div>
       <el-card>
         <v-table
           ref="table"
@@ -91,6 +92,7 @@ export default {
             mobile: '17338132745',
             type: true,
             del: 0,
+            source: '小红书博主'
           },
         ],
         columns: [
@@ -106,6 +108,21 @@ export default {
           {
             label: '联系方式',
             key: 'mobile',
+          }, {
+            label: '来源',
+            key: 'source',
+          },
+          {
+            label: '资料',
+            key: 'status',
+            type: 'render',
+            render: (h, params) => {
+              return (
+                <div>
+                  <img src='https://upfile.juranguanjia.com/image/1/2022/08/30/ab27a9f1cf81fb7f15d6f2504586d5b3qgvTBlhwGBiY2h6wr72esWrtefYC9xA9' />
+                </div>
+              );
+            },
           },
           {
             label: '活动数',
@@ -143,35 +160,8 @@ export default {
                 </div>
               );
             },
-          },
-          {
-            label: '操作',
-            type: 'action',
-            multiActions: true,
-            selectButton: true,
-            buttonInfos: [
-              {
-                name: 'check',
-                label: '查看',
-                type: 'text',
-              },
-              {
-                name: 'edit',
-                label: '编辑',
-                type: 'text',
-              },
-              {
-                name: 'delete',
-                label: '删除',
-                type: 'text',
-                isShow(row) {
-                  return row.del !== 0;
-                },
-              },
-            ],
-          },
+          }
         ],
-        // loading: false,
         total: 12,
       },
     };

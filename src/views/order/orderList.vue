@@ -14,7 +14,7 @@
             </el-form-item>
           </el-col>
           <el-col :span="6">
-            <el-form-item label="客户：">
+            <el-form-item label="客户名：">
               <el-input v-model="search.title"></el-input>
             </el-form-item>
           </el-col>
@@ -28,11 +28,6 @@
       </searchField>
     </el-form>
     <div class="page-content">
-      <div class="button-box">
-        <div class="button-field">
-          <el-button type="primary" @click="handleClick(item)">创建</el-button>
-        </div>
-      </div>
       <el-card>
         <v-table
           ref="table"
@@ -63,6 +58,7 @@ export default {
   data() {
     return {
       search: {},
+      dialogFormVisible: false,
       list: {
         data: [
           {
@@ -133,7 +129,7 @@ export default {
               },
               {
                 name: 'logistics',
-                label: '物流',
+                label: '添加物流',
                 type: 'logistics',
               },
             ],
@@ -151,11 +147,13 @@ export default {
     handleButtonClick(data) {
       if (data.button === 'show') {
         this.$router.push({
-          path: '/order/orderDetail',
+          path: '/order/orderDetail/1',
           query: {
             id: data.data.id,
           },
         });
+      } else if (data.button === 'logistics') {
+        this.dialogFormVisible = true
       }
     },
     clearSearch() {
