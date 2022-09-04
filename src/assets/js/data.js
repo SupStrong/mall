@@ -38,6 +38,7 @@ const promotionType = [{
   id: '4',
   name: '砍一刀'
 }]
+//
 // 文章类型
 const articleType = [{
   id: '1',

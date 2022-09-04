@@ -11,7 +11,9 @@
     "test": "vue-cli-service serve --mode testing",
     "test:unit": "vue-cli-service test:unit",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "upload": "node upload.js",
+    "deploy": "npm run build && npm run upload"
   },
   "dependencies": {
     "address-parse": "^1.2.3",
@@ -25,6 +27,9 @@
     "nprogress": "^0.2.0",
     "qrcode": "^1.3.3",
     "qs": "^6.9.4",
+    "chalk": "^4.1.0",
+    "scp2": "^0.5.0",
+    "ora": "^5.1.0",
     "v-distpicker": "^1.2.7",
     "vee-validate": "^2.1.4",
     "vue": "^2.6.12",

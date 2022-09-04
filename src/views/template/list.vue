@@ -49,7 +49,7 @@
       <div class="button-box">
         <div class="button-field">
           <el-button type="primary" @click="handleClick(item)"
-            >创建测试</el-button
+            >创建</el-button
           >
         </div>
       </div>
